@@ -1,0 +1,14 @@
+---
+- name: bootstrap | Check if Python is installed
+  raw: command -v python3
+  register: bootstrap_python_check
+  changed_when: false
+  failed_when: false
+
+- name: bootstrap | Install Python and dependencies
+  raw: apt-get update && apt-get install -y {{ bootstrap_python_packages | join(' ') }}
+  when: bootstrap_python_check.rc != 0
+  changed_when: true
+
+- name: bootstrap | Gather facts after Python is available
+  setup:
