@@ -26,3 +26,7 @@ Prepares a fresh VPS for Ansible by installing Python.
 
 This role must run with `gather_facts: false` because facts 
 require Python which may not be installed yet.
+
+## License
+
+MIT
