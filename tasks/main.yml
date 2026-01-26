@@ -1,4 +1,8 @@
 ---
+# Note: This role uses 'raw' module which runs before facts are gathered,
+# so we cannot check ansible_distribution. It works on Debian/Ubuntu systems
+# that use apt-get for package management.
+
 - name: bootstrap | Check if Python is installed
   raw: command -v python3
   register: bootstrap_python_check
