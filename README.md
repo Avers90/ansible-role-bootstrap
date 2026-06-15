@@ -5,7 +5,7 @@ Prepares a fresh VPS for Ansible by installing Python.
 ## Requirements
 
 - SSH access to the host (root with password for fresh VPS)
-- Debian/Ubuntu
+- Debian (bullseye, bookworm), Ubuntu (focal, jammy, noble, resolute)
 
 ## Role Variables
 
